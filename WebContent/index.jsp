@@ -22,21 +22,101 @@
 
 <body>
 
-<center><img src="images/frozen.jpg"></center>
+<center>
+	<img src="images/frozen.jpg">
+</center>
 
 <center><h1><b><u>Register Here</u></b></h1>
-
+<div style="color:red"><b>${userMessage}</b></div>  
+<form action="register.jsp" method="post">
 <table>
-<tr><td>Username</td><td><input type="text" name="username" style="font-size:18px; font-family:Times New Roman"><font color=red size=2><b>*required</b></font></td></tr>
-<tr><td>Password</td><td><input type="password" name="password1" style="font-size:18px; font-family:Times New Roman"><font color=red size=2><b>*required</b></font></td></tr>
-<tr><td>Confirm Password</td><td><input type="password" name="password2" style="font-size:18px; font-family:Times New Roman"></td></tr>
-<tr><td>First Name</td><td><input type="text" name="firstName" style="font-size:18px; font-family:Times New Roman"><font color=red size=2><b>*required</b></font></td></tr>
-<tr><td>Last Name</td><td><input type="text" name="lastName" style="font-size:18px; font-family:Times New Roman"><font color=red size=2><b>*required</b></font></td></tr>
-<tr><td>Date</td><td><input type="text" id="datepicker" style="font-size:18px; font-family:Times New Roman"/></td></tr>
-<tr><td>Email Address</td><td><input type="text" name="email" style="font-size:18px; font-family:Times New Roman"></td></tr>
-<tr><td>Billing Address</td><td><textarea name="billingAddress" style="width: 300px; height: 120px; font-size:18px; font-family:Times New Roman"></textarea></td></tr>
-<tr><td></td><td><input type="submit" value="Submit" style="width: 120px; height: 40px; font-size:18px; font-family:Times New Roman"></td></tr>
-</table>
+
+<tr>
+	<td>
+		Username
+	</td>
+	<td>
+		<input type="text" name="username" value="${userName}" style="font-size:18px; font-family:Times New Roman">
+		<font color=red size=2><b>*required</b></font>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		Password
+	</td>
+	<td>
+		<input type="password" name="password" value="${userPassword}" style="font-size:18px; font-family:Times New Roman">
+		<font color=red size=2><b>*required</b></font>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		Confirm Password
+	</td>
+	<td>
+		<input type="password" name="confirmedPassword" value="${userConfirmedPassword}" style="font-size:18px; font-family:Times New Roman">
+	</td>
+</tr>
+
+<tr>
+	<td>
+		First Name
+	</td>
+	<td>
+		<input type="text" name="firstName" value="${userFirstName}" style="font-size:18px; font-family:Times New Roman">
+		<font color=red size=2><b>*required</b></font>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		Last Name
+	</td>
+	<td>
+		<input type="text" name="lastName" value="${userLastName}" style="font-size:18px; font-family:Times New Roman">
+		<font color=red size=2><b>*required</b></font>
+	</td>
+</tr>
+
+<tr>	
+	<td>
+		Date
+	</td>
+	<td>
+		<input type="text" name="datePicker" id="datepicker" value="${userDatePicker}" style="font-size:18px; font-family:Times New Roman"/>
+	</td>
+</tr>
+
+<tr>
+	<td>
+		Email Address
+	</td>
+	<td>
+		<input type="text" name="email" value="${userEmail}" style="font-size:18px; font-family:Times New Roman">
+	</td>
+</tr>
+
+<tr>
+	<td>
+		Billing Address
+	</td>
+	<td>
+		<textarea name="billingAddress" style="width: 300px; height: 120px; font-size:18px; font-family:Times New Roman">${userBillingAddress} </textarea>
+	</td>
+</tr>
+
+<tr>
+	<td>
+	</td>
+	<td>
+		<input type="submit" value="Submit" style="width: 120px; height: 40px; font-size:18px; font-family:Times New Roman">
+	</td>
+</tr>
+</table>    
+
+</form>
 
 </center>
 </body>
